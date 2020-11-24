@@ -46,12 +46,12 @@ def recreate_image(centers, labels, rows, cols):
 class Flag:
     
     ########  Constructor  #######
-    def __init__(self,path):
+    def __init__(self,path,im_path):
         #Receives path image of type string
         self.im_path = path
         
-        #self.im_name = im_name
-        #self.im_path = os.path.join(path, im_name)
+        self.im_name = im_name
+        self.im_path = os.path.join(self.path, self.im_name)
        
         #Saves image in self
         self.img = cv2.imread(self.im_path)
